@@ -1,0 +1,1357 @@
+@import url('https://fonts.googleapis.com/css2?family=Boogaloo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&display=swap');
+
+
+body,
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+a {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.bck-img {
+  background-image: linear-gradient(rgba(60, 56, 56, 0.142),rgb(0, 0, 0)),
+    url("../img/background1.jpg");
+
+  background-color: rgb(34, 34, 34);
+  background-size: 110% 140%;
+  background-position: center;
+  max-width: 2560px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.container {
+  width: 85%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.nav > a {
+  margin-right: 40px;
+  color: white;
+
+  transition: all 150ms ease-in-out;
+}
+.nav > a:last-child {
+  margin-right: 0;
+}
+
+.nav > a:hover {
+  color: rgb(179, 179, 179);
+}
+
+.logo {
+  color: white;
+  transition: all 150ms ease-in-out;
+}
+.logo:hover {
+  color: rgb(179, 179, 179);
+}
+
+.header-background {
+  /* backdrop-filter: blur(6px); */
+  height: 85px;
+}
+.logo-wrapper{
+  display: flex;
+  flex-direction: row;
+}
+.logo-wrapper h3{
+  margin-left: 10px;
+  color: white;
+}
+.header h3{
+  font-size: 1.7em;
+  margin-top: 2px;
+}
+.nav{
+  font-size: 1.25em;
+}
+
+
+@media screen and (max-width: 767px) {
+  .header,.header-background {
+    display: none;
+  }
+  .logo-wrapper{
+    position:fixed;
+    font-size: 1.25em;
+
+  }
+  
+
+}
+
+/* mob version  */
+
+.mob-open,
+.mob-close {
+  width: 30px;
+  height: 30px;
+  position: fixed;
+
+}
+.mob-head{
+  background-color: #000000;
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+  height: 48px;
+  opacity: 85%;
+  position: fixed;
+  width: 100%;
+}
+
+.mob-head h3{
+
+  margin-left: 10px;
+  margin-top: 12px;
+
+}
+.mob-head img{
+
+  margin-left: 10px;
+  margin-top: 10px;
+
+}
+.mob-open {
+  position: fixed;
+  right: 30px;
+  top: 10px;
+}
+
+.mob-list {
+  height: 85%;
+  width: 35%;
+  position: fixed;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 45px;
+opacity: 85%;
+  background-color: #000000;
+}
+
+.mob-list__item {
+  color: white;
+}
+
+
+.mob-close {
+  position: fixed;
+  right: 30px;
+  top: 10px;
+  z-index: 5;
+}
+
+@media screen and (min-width: 768px) {
+  .mob-menu {
+    display: none;
+  }
+}
+
+/* js */
+
+.opened {
+  opacity: 1;
+  animation: openAnim 200ms ease-in-out;
+}
+
+.close {
+  opacity: 0;
+  animation: closeAnim 200ms ease-in-out;
+}
+
+/* animation  */
+
+@keyframes openAnim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes closeAnim {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.content{
+  text-align: center;
+  color: white;
+  font-family: 'Sura', serif;
+  margin-top: 0%;
+  color: #fff;
+  text-align: center;
+  padding: 50px 0;
+}
+.content h2 {
+  font-family: 'Sura', serif;      
+  font-weight: lighter;
+margin-top: 220px;
+ text-align: center;
+  font-size: 3.5em;
+  transform: scale(1.2);
+  margin-bottom: 1px;
+  justify-content: center;
+  letter-spacing: 2px;
+  padding-bottom: 10px;
+}
+.container h2{
+  font-family: 'Sura', serif;
+  letter-spacing: 2px;
+}
+.feel{
+  font-family: 'Style Script', cursive;
+  font-size: 3.5em;
+  font-weight: lighter;
+  letter-spacing: 2px;
+}
+
+.content p {
+  font-family: 'Sura', serif;
+  font-size: 4.0em;
+  margin-bottom: 2px;
+  font-weight:bold;
+  letter-spacing: 2px;
+  
+}
+.std{
+  font-family: 'Sura', serif;
+  color: rgb(214, 43, 100);
+  font-weight: bold;
+}
+.content .button {
+  font-family: 'Sura', serif;
+  display: inline-block;
+ border-style: solid;
+ border-width: 2px;
+ background-color:none;
+  color: rgb(255, 255, 255);
+  border-color:rgb(227, 227, 227);;
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 25px;
+  text-decoration: none;
+  cursor: pointer;
+}
+@media screen and (max-width:767px){
+  
+  
+  .bck-img{
+    height: 85vh;
+  }
+  
+  
+  
+
+  .content{
+    text-align: center;
+    color: white;
+    font-family: 'Sura', serif;
+    margin-top: 0%;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0;
+  }
+  .content h2 {
+    font-family: 'Sura', serif;      
+    font-weight: lighter;
+  margin-top: 250px;
+   text-align: center;
+    font-size: 2.0em;
+    transform: scale(1.2);
+    margin-bottom: 1px;
+    justify-content: center;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+  }
+  .container h2{
+    font-family: 'Sura', serif;
+    letter-spacing: 2px;
+  }
+  .feel{
+    font-family: 'Style Script', cursive;
+    font-size: 3.0em;
+    font-weight: lighter;
+    letter-spacing: 2px;
+  }
+  
+  .content p {
+    font-family: 'Sura', serif;
+    font-size: 2.8em;
+    margin-bottom: 2px;
+    font-weight:bold;
+    letter-spacing: 2px;
+    
+  }
+  .std{
+    font-family: 'Sura', serif;
+    color: rgb(214, 43, 100);
+    font-weight: bold;
+  }
+  .content .button {
+    font-family: 'Sura', serif;
+    display: inline-block;
+   border-style: solid;
+   border-width: 2px;
+   background-color:none;
+    color: rgb(255, 255, 255);
+    border-color:rgb(227, 227, 227);;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 25px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+}
+
+.page2{
+  display: flex;
+flex-direction: row;
+background-color:rgb(244, 238, 238);
+}
+
+.cont{
+
+  background-color:rgb(244, 238, 238);
+  height: 85vh;
+  width:100vw;;
+  padding-top: 10px;
+  letter-spacing: 1px;
+}
+.imgcon{
+  background-color: rgb(244, 238, 238);;
+ padding-top: 37px;
+  height:85vh;
+  width: 28vw;
+  background-size: cover;
+  padding-right: 50px;
+
+}
+.img{
+  /* background-color: rgb(244, 238, 238);; */
+ padding-top: 37px;
+  -webkit-filter: grayscale(60%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(70%);
+  height:70vh;
+  width: 28vw;
+  background-size: cover;
+
+}
+
+
+
+.page3{
+  background-color: yellow;
+}
+
+.cont h2{
+  font-family: 'Sura', serif;
+  padding-top: 60px;
+  margin-left: 35px;
+  font-size: 2.56em;
+  text-align: center;
+}
+.cont h1 {
+  font-family: 'Style Script', cursive;
+  padding-top: 100px;
+  /* text-align: center; */
+  font-size: 4.0em;
+  margin-left: 330px;
+  padding-bottom: 50px;
+  letter-spacing: 2px;
+
+  
+  
+}
+.cont p {
+  font-family: 'Sura', serif;
+   text-align: center; 
+  padding-top: 12px;
+  font-size: 1.8em;
+  margin-left: 0px;
+  letter-spacing: 2px;
+}
+
+.set1{
+
+padding-top: 20px;
+padding-right: 40px;
+}
+.set1 text{
+  padding-top: 100px;
+}
+.serv{
+  display: flex;
+  flex-direction: row;
+  height: 85vh;
+  background-color:rgb(3, 2, 1);
+  padding-left: 35px;
+  
+}
+.beauty{
+  width:31.3vw;
+  background-image: url(beauty.jpg);
+  background-repeat: no-repeat;
+  background-size:510px 600px;
+  background-image: linear-gradient(rgba(255, 255, 255, 0),rgb(0, 0, 0)), url(beauty.jpg);
+
+}
+.bridal{
+  width:31.3vw;
+  background-image: url(bridal.jpg);
+  background-repeat: no-repeat;
+  background-size:510px 600px;
+  background-image: linear-gradient(rgba(255, 255, 255, 0),rgb(0, 0, 0)), url(bridal.jpg); 
+}
+.eye{
+
+  width:31.3vw;
+  background-image: url(eye.jpg);
+  background-repeat: no-repeat;
+  background-size:510px 600px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0),rgb(0, 0, 0)), url(eye.jpg); 
+}
+.serv .eye h2{
+  font-family: 'Sura', serif;
+  color: rgb(255, 255, 255);
+  /* text-align: center; */
+  font-size: 2.0em;
+  margin-left: 200px;
+ 
+}
+.serv .eye h1{
+  font-family: 'Sura', serif;
+  color: rgb(255, 255, 255);
+  /* text-align: center; */
+  font-size: 3.0em;
+  margin-left: 230px;
+  padding-top: 368px;
+ 
+  
+}
+.serv .eye .btn{
+  font-family: 'Sura', serif;
+  display: inline-block;
+ border-style: solid;
+ border-width: 2px;
+  color: rgb(255, 255, 255);
+  border-color:rgb(227, 227, 227);;
+  margin-top: 10px;
+  margin-left: 200px;
+  padding: 5px 10px;
+  font-size: 25px;
+  text-decoration: none;
+  cursor: pointer;
+ 
+}
+.btn{
+  font-family: 'Sura', serif;
+  display: inline-block;
+ border-style: solid;
+ border-width: 2px;
+  color: rgb(255, 255, 255);
+  border-color:rgb(227, 227, 227);;
+  margin-top: 10px;
+  margin-left: 150px;
+  padding: 5px 10px;
+  font-size: 25px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.serv h1{
+  font-family: 'Sura', serif;
+  padding-top: 385px;
+  /* text-align: center; */
+  color: #fff;
+  font-size: 2.2em;
+  font-weight: light;
+  margin-left: 165px;
+  letter-spacing: 1px;
+  
+}
+.serv .bridal h1{
+  font-family: 'Sura', serif;
+  padding-top: 385px;
+  /* text-align: center; */
+  color: #fff;
+  font-size: 2.5em;
+  font-weight: lighter;
+  margin-left: 185px;
+  letter-spacing: 1px;
+  
+}
+.serv .bridal .btn{
+  font-family: 'Sura', serif;
+  display: inline-block;
+ border-style: solid;
+ border-width: 2px;
+  color: rgb(255, 255, 255);
+  border-color:rgb(227, 227, 227);;
+  margin-top: 10px;
+  margin-left: 160px;
+  padding: 5px 10px;
+  font-size: 25px;
+  text-decoration: none;
+  cursor: pointer;
+  
+}
+.serv .bridal h2{
+  font-family: 'Sura', serif;
+  color: #fff;
+  /* text-align: center; */
+  font-size: 2.0em;
+  margin-left: 160px;
+  letter-spacing: 1.25px;
+  
+}
+.serv h2{
+  font-family: 'Sura', serif;
+  color: #fff;
+  /* text-align: center; */
+  font-size: 2.0em;
+  margin-left: 150px;
+  letter-spacing: 1.25px;
+ 
+ 
+}
+.page3{
+  background-color:rgb(14, 14, 14);
+  width: 98.9vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+.pg3cont{
+padding-top:74px;
+  background-color: rgb(14, 14, 14);
+  width: 70vw;
+  height: 85vh;
+  color: white;
+}
+.pg3img{
+  margin-top: 55px;
+  width:30vw;
+  height: 85vh;
+  margin-right: 85px;
+  background-size: cover ;
+  background-image: url(pg3img.jpg);
+ 
+}
+.pg3cont h3{
+  font-family: 'Sura', serif;
+  padding-top: 60px;;
+  text-align: center;
+  font: 3.5em;
+  font-weight: lighter;
+  letter-spacing: 1.25px;
+}
+.page3 h2{
+  font-family: 'Style Script', cursive;
+  padding-top:20px;
+  text-align: center;
+  font-size: 4.0em;
+  font-weight: lighter;
+  padding-bottom: 70px;
+  padding-top: 45px;
+  letter-spacing: 1.5px;
+}
+.pg3cont p{
+  font-family: 'Sura', serif;
+  text-align: center;
+  font-size: 1.5em;
+  letter-spacing: 1.0px;
+}
+.pg3cont h1{
+  font-family: 'Style Script', cursive;
+  text-align: center;
+  padding-top:90px;
+  font-weight: lighter;
+  font-size: 3.5em;;
+}
+.pg3cont p a{
+  color: #f7f7f7;
+  text-decoration: none;
+
+}
+.page4{
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(197, 220, 233);
+  height: 95vh;
+  width: 98.9vw;;
+}
+.pg4img{
+padding-top: 50px;
+padding-left: 85px;
+}
+.pg4cont{
+  padding-top: 150px;
+   margin-left: 220px;
+  text-align: center;
+  letter-spacing: 1.5px;
+}
+.pg4cont h1{
+  text-align:center ;
+  font-family: 'Style Script', cursive;
+  font-weight: lighter;
+  color: black;
+  font-size: 4.0em;
+}
+.pg4cont p{
+  text-align:center ;
+  padding-top: 50px;
+  font-family: 'Sura', serif;
+  font-weight: lighter;
+  color: black;
+  font-size: 1.5em;
+}
+
+.bt{
+  font-family: 'Sura', serif;
+    display: inline-block;
+   
+   border-width: 2px;
+   background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255); 
+    margin-top: 40px;
+    padding: 12px 25px;
+    font-size: 25px;
+    text-decoration:none;
+    cursor: pointer;
+    box-shadow: black;
+    text-shadow: 2px;
+}
+
+.last{
+  
+  height: 100vh;
+  width:100vw;
+  background-color: rgb(7, 7, 7);
+  /* font-family: 'Source Serif Pro', serif; */
+
+}
+.upp{
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+  font-weight: lighter;
+}
+ 
+.location {
+  /* font-family: 'Source Serif Pro', serif; */
+  text-align: start;
+  color: white;
+  margin-left: 100px;
+  margin-top: 100px;
+  font-weight: lighter;
+}
+
+.location h1{
+  /* font-family: 'Source Serif Pro', serif; */
+    padding-bottom: 20px;
+    font-size: 2.5em; 
+  }
+  .location p{
+    /* font-family: 'Source Serif Pro', serif; */
+    font-size: 1.5em;
+    font-weight: lighter;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@1,200&family=Sura&display=swap');
+  .contact{
+    font-family: 'Source Serif Pro', serif;
+    margin-left: 200px;
+    margin-top: 100px;
+    color: white;
+  }
+  .contact h1{
+    font-weight: lighter;
+    font-size: 2.5em;
+    padding-bottom: 20px;
+  }
+  .contact p{
+    font-size: 1.5em;
+    text-align:start
+  }
+  .contact a{
+    color: #fff;
+  }
+  .social 
+  {
+   
+    height: 20vh;
+    width:25vw;
+    color: rgb(255, 255, 255);
+    margin-left: 200px;;
+    margin-top: 100px;
+  }
+  .social h1{
+    padding-bottom: 20px;
+    font-size: 2.2em;
+  }
+
+  .social a{
+    align-items: start;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+  }
+ .social i :hover{
+  cursor: pointer;
+ }
+ .formb{
+  font-family: 'Source Serif Pro', serif;
+  padding-top:30px;
+  margin-left: 85px;
+  color: white;
+  height:50vh;
+  width:40vw;
+  
+ }
+ .formb h1{
+  margin-left: 30px;
+  padding-top: 30px;
+  font-family: 'Source Serif Pro', serif;
+ }
+.form2 input{
+  padding: 10px 10px 10px 10px;
+  background-color:rgb(53, 54, 63) ;
+  color: #fff;
+  font-size: 1.0em;
+  cursor:pointer;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.form2 {
+  padding: 30px;
+
+  
+}
+.form2 ::placeholder{
+  opacity: 50%;
+  color: #fff;
+}
+.msg-top::placeholder{
+  text-align: start;
+}
+
+.form-col{
+  display: flex;
+  flex-direction: row;
+  padding-right: 20px;
+  
+}
+.col{
+  padding-top:  30px;
+  padding-right: 20px;
+}
+.form-control3{
+  padding-top: 30px;
+  height: 100px;
+  width:435px;
+  background-color: red;
+}
+.msg-top{
+  padding-top: 30px;
+
+}
+.submit input{
+  
+  font-family: 'Source Serif Pro', serif;
+  background-color:rgb(4, 4, 4);
+  color: white;
+  margin-left: 350px;
+  margin-top: 12px;
+  cursor: pointer;
+}
+.submit :hover{
+  cursor: pointer;
+}
+.credit p {
+  font-family: 'Source Serif Pro', serif;
+  margin-left: 35px;
+  font-size: 1.0em;;
+
+}
+.credit a{
+  font-family: 'Style Script', cursive;
+
+}
+.form-control1
+.form-control2
+.form-control3
+{
+  font-family: 'Source Serif Pro', serif;
+  color: #fff;
+}
+
+
+@media screen and (max-width:767px) {
+
+  .body{
+    margin: 0px;
+    padding: 0px;
+  }
+  @media screen and (max-width:720px) {
+  
+      @import url('https://fonts.googleapis.com/css2?family=Boogaloo&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&display=swap');
+      
+    
+      .page2{
+        display: flex;
+      flex-direction: column;
+      background-color:rgb(244, 238, 238);
+      
+      }
+      
+      .cont{
+      
+        background-color: rgb(244, 238, 238);
+        height: 70vh;
+        width: 100%;
+        /* padding-top: 10px; */
+        letter-spacing: 01x;
+        text-align: center;
+      }
+      .imgcon{
+        background-color: rgb(244, 238, 238);
+        height: 85vh;
+        width: 100%;
+        background-size: cover;
+        padding-right: 0px
+      
+      }
+      .img{
+    
+        padding-top: 0px;
+        -webkit-filter: grayscale(70%);
+        filter: grayscale(70%);
+        height: 74vh;
+        width: 85vw;
+        background-size: cover;
+        align-items: center;
+        margin-left: 40px;
+        padding-bottom: 20px;
+        
+      
+      }
+      .page3{
+        background-color: yellow;
+      }
+      
+      .cont h2{
+        font-weight: initial;
+        font-family: 'Sura', serif;
+        padding-top: 10px;
+        margin-left: 5px;
+        font-size: 1.85em;
+        text-align: center;
+        letter-spacing: 1px;
+      }
+      .cont h1 {
+        font-family: 'Style Script', cursive;
+        padding-top: 67px;
+         text-align: center; 
+        font-size: 2.5em;
+        margin-left:20px;
+        padding-bottom: 30px;
+      }
+      .cont p{
+        font-family: 'Sura', serif;
+        text-align: center;  
+        padding-top: 10px;
+        font-size: 1.5em;
+         
+        letter-spacing: 1px;
+      }
+      
+      .set1{
+      
+      padding-top: 20px;
+      padding-right: 40px;
+      }
+      
+      .serv{
+        display: flex;
+        flex-direction: column;
+        height: 210vh;
+        background-color:rgb(3, 2, 1);
+        width: 100%;
+        
+  
+        
+      }
+      .beauty{
+        width: 100%;
+        height: 80vh;
+        background-image: url(beauty.jpg);
+        background-repeat: no-repeat;
+        background-size: 85% 100%;
+        background-image: linear-gradient(rgba(255, 255, 255, 0),rgb(0, 0, 0)), url(beauty.jpg);
+      
+      }
+      .bridal{
+        width: 100%;;
+        height: 80vh;
+        background-image: url(bridal.jpg);
+        background-repeat: no-repeat;
+       background-size: 85% 100%;
+        background-image: linear-gradient(rgba(255, 255, 255, 0),rgb(0, 0, 0)), url(bridal.jpg); 
+      }
+      .eye{
+      
+        width: 100%;;
+        height: 80vh;
+        background-image: url(eye.jpg);
+        background-repeat: no-repeat;
+            background-size: 85% 100%;
+        background-image: linear-gradient(rgba(0, 0, 0, 0),rgb(0, 0, 0)), url(eye.jpg); 
+      }
+      .serv .eye h2{
+        font-family: 'Sura', serif;
+        color: rgb(255, 255, 255);
+        /* text-align: center; */
+        font-size: 2.0em;
+        margin-left: 145px;
+       
+      }
+      .serv .eye h1{
+        font-family: 'Sura', serif;
+        color: rgb(255, 255, 255);
+        /* text-align: center; */
+        font-size: 3.0em;
+        margin-left: 170px;
+        padding-top: 300px;
+       
+        
+      }
+      .serv .eye .btn{
+        font-family: 'Sura', serif;
+        display: inline-block;
+       border-style: solid;
+       border-width: 2px;
+        color: rgb(255, 255, 255);
+        border-color:rgb(227, 227, 227);;
+        margin-top: 10px;
+        margin-left: 140px;
+        padding: 5px 10px;
+        font-size: 25px;
+        text-decoration: none;
+        cursor: pointer;
+       
+       
+      }
+      .btn{
+        font-family: 'Sura', serif;
+        display: inline-block;
+       border-style: solid;
+       border-width: 2px;
+        color: rgb(255, 255, 255);
+        border-color:rgb(227, 227, 227);;
+        margin-top: 10px;
+        margin-left: 113px;
+        padding: 5px 10px;
+        font-size: 25px;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      
+      .serv h1{
+        font-family: 'Sura', serif;
+        padding-top: 300px;
+        /* text-align: center; */
+        color: #fff;
+        font-size: 2.2em;
+        font-weight: light;
+        margin-left: 130px;
+        letter-spacing: 1px;
+        
+      }
+      .serv .bridal h1{
+        font-family: 'Sura', serif;
+        padding-top: 285px;
+        /* text-align: center; */
+        color: #fff;
+        font-size: 2.5em;
+        font-weight: lighter;
+        margin-left: 130px;
+        letter-spacing: 1px;
+        
+      }
+      .serv .bridal .btn{
+        font-family: 'Sura', serif;
+        display: inline-block;
+       border-style: solid;
+       border-width: 2px;
+        color: rgb(255, 255, 255);
+        border-color:rgb(227, 227, 227);;
+        margin-top: 10px;
+        margin-left: 113px;
+        padding: 5px 10px;
+        font-size: 25px;
+        text-decoration: none;
+        cursor: pointer;
+        
+      }
+      .serv .bridal h2{
+        font-family: 'Sura', serif;
+        color: #fff;
+        /* text-align: center; */
+        font-size: 2.0em;
+        margin-left: 114px;
+        letter-spacing: 1.25px;
+        
+      }
+      .serv h2{
+        font-family: 'Sura', serif;
+        color: #fff;
+        /* text-align: center; */
+        font-size: 2.0em;
+        margin-left: 114px;
+        letter-spacing: 1.25px;
+       
+       
+      }
+      .page3{
+        background-color: rgb(14, 14, 14);
+        width: 100%;
+        height: 160vh;
+        display: flex;
+        flex-direction: column;
+      }
+      .pg3cont{
+        text-align: center; 
+        /* padding-left: 50px; */
+        padding-top: 74px;
+        background-color: rgb(14, 14, 14);
+        width: 65vh;
+        height: 51vh;
+        color: white;
+        padding-bottom: 100px;
+      }
+     .pg3img{
+      
+        background-image: url(pg3img.jpg);
+        background-size: 400px 519px;
+        margin-left: 22px;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100%;
+  }
+      
+     
+  .bgpg3{
+   
+    /* background-size: 666 777px; */
+    height: 100vh;
+    width: 100%;
+  }
+  .pg3cont h3{
+        margin-left: none;
+        padding-top: 0px;
+        /* text-align: center; */
+        font: 3.5em;
+        font-size: 1.5em;
+        /* font-weight: lighter; */
+        letter-spacing: 1.25px;
+      }
+      .page3 h2{
+        font-family: 'Style Script', cursive;
+        padding-top: 20px;
+        text-align: center;
+        font-size: 2em;
+        font-weight: lighter;
+        padding-bottom: 70px;
+        padding-top: 48px;
+        letter-spacing: 1.5px;
+      }
+      .pg3cont p{
+        font-family: 'Sura', serif;
+        text-align: center;
+        font-size: 1.5rem;
+        letter-spacing: 1.0px;
+      }
+      .pg3cont h1{
+        font-family: 'Style Script', cursive;
+        text-align: center;
+        padding-top: 52px;
+        font-weight: lighter;
+        font-size: 3.5em;
+      }
+      .pg3cont p a{
+        color: #f7f7f7;
+        text-decoration: none;
+      
+      }
+  
+  .page4{
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(197, 220, 233);
+        height: 145vh;
+        width: 100%;
+      }
+      
+      .pg4img{
+        padding-top: 35px;
+        padding-left: 23px;
+      width: 50vw;
+      height: 50vh;
+      }
+      .pg4cont{
+        padding-top: 285px;
+         margin-left: 0px;
+        /* text-align: center; */
+        height: 100vh;
+        width: 100%;
+  
+      }
+      .pg4cont h1{
+        text-align:center ;
+        font-family: 'Style Script', cursive;
+        font-weight: lighter;
+        color: black;
+        font-size: 3.0em;
+      }
+      .pg4cont p{
+        text-align:center ;
+        padding-top: 20px;
+        font-family: 'Sura', serif;
+        font-weight: lighter;
+        color: black;
+        font-size: 1.0em;
+      }
+      
+      .bt{
+        font-family: 'Sura', serif;
+          display: inline-block;
+         border-width: 2px;
+         background-color: rgb(0, 0, 0);
+          color: rgb(255, 255, 255); 
+          margin-top: 20px;
+          padding: 12px 25px;
+          font-size: 25px;
+          text-decoration:none;
+          cursor: pointer;
+          box-shadow: black;
+          text-shadow: 2px;
+      }
+      
+      .last{
+        
+        height: 120vh;
+        width:100%;
+        background-color: rgb(7, 7, 7);
+        /* font-family: 'Sura', serif; */
+      }
+      .upp{
+        display: flex;
+        flex-direction:column;
+      }
+       
+      .location {
+        font-family: 'Sura', serif;
+        text-align: start;
+        color: white;
+        margin-left:  50px;
+        margin-top: 48px;
+        font-weight: lighter;
+      }
+      
+      .location h1{
+        /* font-family: 'Source Serif Pro', serif; */
+          padding-bottom: 20px;
+          font-size: 1.5em; 
+        }
+        .location p{
+          font-family: 'Source Serif Pro', serif;
+          font-size: 1.0em;
+          font-weight: lighter;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@1,200&family=Sura&display=swap');
+        .contact{
+          font-family: 'Source Serif Pro', serif;
+          margin-left: 50px;
+          margin-top: 50px;
+          color: white;
+        }
+        .contact h1{
+          font-weight: lighter;
+          font-size: 2.0em;
+          padding-bottom: 20px;
+        }
+        .contact p{
+          font-size: 1.0em;
+          text-align:start
+        }
+        .contact a{
+          color: #fff;
+        }
+        .social 
+        {
+          height: 20vh;
+          width:40vw;
+          color: rgb(255, 255, 255);
+          margin-left: 50px;;
+          margin-top: 50px;
+        }
+        .social h1{
+          padding-bottom: 20px;
+          font-size: 1.5em;
+        }
+        .social a{
+          align-items: start;
+          color: rgb(255, 255, 255);
+          text-decoration: none;
+  
+        }
+       .social i :hover{
+        cursor: pointer;
+       }
+      
+      .formb{
+        font-family: 'Source Serif Pro', serif;
+        padding-top:0px;
+        margin-left: 20px;
+        color: white;
+        height:50vh;
+        width:40vw;
+        
+       }
+       .formb h1{
+        margin-left: 30px;
+        padding-top: 0px;
+        font-family: 'Source Serif Pro', serif;
+        font-size: 1.25em;
+       }
+      .form2 input{
+        padding: 10px 10px 10px 10px;
+        background-color:rgb(53, 54, 63);
+        color: #fff;
+        font-size: 1.0em;
+        cursor:pointer;
+        transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+      
+      .form2 {
+        padding: 10px;
+        margin-left: 20px;
+        
+      }
+      .form2 ::placeholder{
+        color: #fff;
+        opacity: 50%;
+      }
+      .msg-top::placeholder{
+        text-align: start;
+        opacity: 5px;
+      }
+      
+      .form-col{
+        display: flex;
+        flex-direction: row;
+        padding-right: 20px;
+      }
+      .col{
+        padding-top:  30px;
+        padding-right: 10px;
+      }
+      .form-control3{
+        padding-top: 30px;
+        height: 100px;
+        width:390px;
+     
+      }
+      
+      .form-control1{
+        padding-top: 30px;
+        height: 40px;
+        width:185px;
+        padding: 10px;
+    
+      }
+      .form-control2{
+        padding-top: 30px;
+        height: 40px;
+        width:185px;
+        
+      }
+      .msg-top{
+        padding-top: 30px;
+      
+      }
+      .submit input{
+        font-family: 'Source Serif Pro', serif;
+        background-color:rgb(7, 7, 7);;
+        color: white;
+        margin-left: 300px;
+        margin-top: 10px;
+        cursor: pointer;
+      }
+      .submit :hover{
+        cursor: pointer;  
+      }
+      .credit{
+        width: 350px;
+        padding-top: 20px;
+        padding-left: 0px;
+      
+      }
+      .credit .mark  {
+        font-family: 'Source Serif Pro', serif;
+        font-size: 1.0em;     
+      }
+      .credit a{
+        font-family: 'Style Script', cursive;
+       
+        
+      }
+      .form-control1
+      .form-control2
+      {
+        font-family: 'Source Serif Pro', serif;
+        color: #fff;
+      }
+      .fa-3x {
+        font-size: 2em;
+  
+      }
+  }
+  
+  
+  
+}
